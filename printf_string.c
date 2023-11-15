@@ -2,15 +2,15 @@
 
 /**
  * printf_string - this function prints a string
- * @val: argument
- * @Return: length of the string
+ * @arg: argument
+ * Return: length of the string
  */
 
 int printf_string(va_list arg)
 {
 	char *str = va_arg(arg, char*);
 	int str_len = 0, i = 0;
-	
+
 	if (str == NULL)
 	{
 		str = "(null)";
@@ -25,4 +25,4 @@ int printf_string(va_list arg)
 	}
 
 	return (str_len);
-}	
+}
