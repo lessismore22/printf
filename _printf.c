@@ -10,7 +10,9 @@ int _printf(const char *format, ...)
 {
 	spec_types st[] = {
 		{"%c", printf_char}, {"%s", printf_string},
-		{"%%", printf_sign}
+		{"%%", printf_sign},
+	       	{"%i", printf_int}, 
+		{"%d", printf_dec}
 	};
 	int i = 0, j;
 	int str_len = 0;
@@ -24,7 +26,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 2;
+		j = 4;
 		while (j >= 0)
 		{
 			if (st[j].id[0] == format[i] && st[j].id[1] == format[i + 1])
