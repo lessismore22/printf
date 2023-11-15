@@ -2,27 +2,29 @@
 
 /**
  * printf_string - this function prints a string
- * @arg: argument
+ * @val: argument
  * Return: length of the string
  */
 
-int printf_string(va_list arg)
+int printf_string(va_list val)
 {
-	char *str = va_arg(arg, char*);
-	int str_len = 0, i = 0;
+	char *str;
+	int i, len;
 
+	str = va_arg(val, char *);
 	if (str == NULL)
 	{
 		str = "(null)";
+		len = _strlen(str);
+		for (i = 0; i < len; i++)
+			_putchar(str[i]);
+		return (len);
 	}
-
-	while (str[str_len] != '\0')
+	else
 	{
-		str_len++;
-
-		_putchar(str[i]);
-		i += str_len;
+		len = _strlen(str);
+		for (i = 0; i < len; i++)
+			_putchar(str[i]);
+		return (len);
 	}
-
-	return (str_len);
 }
