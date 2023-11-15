@@ -20,6 +20,7 @@ int printf_string(va_list val);
 int printf_char(va_list val);
 int printf_sign(void);
 int _putchar(char c);
-
+int printf_unsigned(va_list arg);
+int printf_int(va_list arg);
 
 #endif

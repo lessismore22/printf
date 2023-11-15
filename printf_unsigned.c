@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * printf_int - prints integer
+ * printf_unsigned - prints integer
  * @arg: argument to be printed
  * Return: number of characters printed
  */
 
-int printf_int(va_list arg)
+int printf_unsigned(va_list arg)
 {
 	int n = va_arg(arg, int);
 	int num, last_val = n % 10, dig_val, exp = 1;
