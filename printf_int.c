@@ -7,8 +7,7 @@
  */
 
 int printf_int(va_list arg)
-<<<<<<< HEAD
-=======
+
 {
 	int n = va_arg(arg, int);
 	int num, last_val = n % 10, dig_val, exp = 1;
@@ -51,17 +50,18 @@ int printf_int(va_list arg)
 #include "main.h"
 
 /**
- * printf_int - prints integer
+ * printf_dec - prints decimal
  * @arg: argument to be printed
  * Return: number of characters printed
  */
 
-int print_int(va_list arg)
->>>>>>> 9d9b06c7a8e2bedc11e8f286f9ea0021f7f584cd
+int printf_dec(va_list arg)
+
 {
 	int n = va_arg(arg, int);
-	int num, last_val = n % 10, dig_val, exp = 1;
+	int num, last_val = n % 10, dig_val;
 	int i = 1;
+	int exp = 1;
 
 	n = n / 10;
 	num = n;
