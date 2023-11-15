@@ -5,6 +5,6 @@
  */
 int printf_sign(void)
 {
-	_putchar('%');
+	_putchar(37);
 	return (1);
 }
