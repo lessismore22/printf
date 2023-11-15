@@ -11,15 +11,15 @@ int _printf(const char *format, ...)
 	spec_types st[] = {
 		{"%c", printf_char}, {"%s", printf_string},
 		{"%%", printf_sign},
-	       	{"%i", printf_int}, 
+		{"%i", printf_int},
 		{"%d", printf_dec}
 	};
+
+	va_list args;
 	int i = 0, j;
-	int str_len = 0;
+	int len = 0;
 
-	va_list arg;
-
-	va_start(arg, format);
+	va_start(args, format);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -31,16 +31,16 @@ Here:
 		{
 			if (st[j].id[0] == format[i] && st[j].id[1] == format[i + 1])
 			{
-				str_len += st[j].f(arg);
+				len += st[j].f(args);
 				i = i + 2;
 				goto Here;
 			}
 			j--;
 		}
 		_putchar(format[i]);
-		str_len++;
+		len++;
 		i++;
 	}
-		va_end(arg);
-		return (str_len);
+	va_end(args);
+	return (len);
 }
