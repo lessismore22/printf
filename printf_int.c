@@ -47,7 +47,7 @@ int printf_int(va_list arg)
 }
 
 
-#include "main.h"
+
 
 /**
  * printf_dec - prints decimal
