@@ -7,11 +7,11 @@
  *
  */
 
-int print_hex(va_list val)
+int print_hex(va_list arg)
 {
 	int i, count = 0;
 	int *arr;
-	unsigned int num = va_arg(val, unsigned int);
+	unsigned int num = va_arg(arg, unsigned int);
 	unsigned int temp = num;
 
 	while (num / 16 != 0)
@@ -21,8 +21,7 @@ int print_hex(va_list val)
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
-	if (arr == NULL)
-		return (NULL);
+
 	for (i = 0; i < count; i++)
 	{
 		arr[i] = temp % 16;

@@ -10,7 +10,7 @@
 int print_exc(va_list val)
 {
 	char *s;
-	int i, len = 0;
+	int i, str_len = 0;
 	int value;
 
 	s = va_arg(val, char *);
@@ -22,22 +22,22 @@ int print_exc(va_list val)
 		{
 	        	_putchar('\\');
 	         	_putchar('x');
-		        len = len + 2;
+		        str_len = str_len + 2;
 		        value = s[i];
 		        if (value < 16)
 			{
 				_putchar('0');
-				len++;
+				str_len++;
 			}
 
-			len = len + printf_HEX_ex(value);
+			str_len = str_len + printf_HEX_ex(value);
 		}
 		else
 		{
 			_putchar(s[i]);
-			len++;
+			str_len++;
 		}
 	}
-	return (len);
+	return (str_len);
 }
 

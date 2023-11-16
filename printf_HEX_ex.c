@@ -20,8 +20,7 @@ int print_HEX_ex(unsigned int num)
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
-	if (arr == NULL)
-		return (NULL);
+
 	for (i = 0; i < count; i++)
 	{
 		arr[i] = temp % 16;
