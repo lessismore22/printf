@@ -2,12 +2,12 @@
 
 /**
  * print_HEX_ex - a function that converts to hex
- * @val: variable param
+ * @num: arguments inputed
  * Return: count
  *
  */
 
-int print_HEX_ex(unsigned int num)
+int printf_HEX_ex(unsigned int num)
 {
 	int i, count = 0;
 	int *arr;
