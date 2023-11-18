@@ -31,7 +31,7 @@ int printf_int(va_list arg);
 int printf_dec(va_list arg);
 int print_oct(va_list val);
 int printf_hex(va_list val);
-int printf_HEX(va_list arg);
+int printf_HEX(va_list val);
 int printf_HEX_ex(unsigned int num);
 int print_exc(va_list arg);
 int print_reve(va_list val);
