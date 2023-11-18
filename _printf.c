@@ -10,9 +10,11 @@ int _printf(const char *format, ...)
 {
 	spec_types st[] = {
 		{"%c", printf_char}, {"%s", printf_string},
-		{"%%", printf_sign},
-		{"%i", printf_int},
-		{"%d", printf_dec}
+		{"%%", printf_sign}, {"%i", printf_int},
+		{"%d", printf_dec}, {"%r", print_reve},
+		{"%R", print_rot13},
+		{"%b", print_bin}, {"%u", printf_unsigned}, {"%x", print_hex},
+		{"%X", print_HEX}, {"%S", print_exc}, {"%p", printf_pointer}
 	};
 
 	va_list args;
