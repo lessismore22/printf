@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_hex - a function that converts to hex
+ * printf_hex - a function that converts to hex
  * @val: variable param
  * Return: count
  *
  */
 
-int print_hex(va_list val)
+int printf_hex(va_list val)
 {
 	int i, count = 0;
 	int *arr;
