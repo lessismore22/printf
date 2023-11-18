@@ -7,11 +7,11 @@
  *
  */
 
-int print_hex(va_list arg)
+int print_hex(va_list val)
 {
 	int i, count = 0;
 	int *arr;
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num = va_arg(val, unsigned int);
 	unsigned int temp = num;
 
 	while (num / 16 != 0)
@@ -27,9 +27,9 @@ int print_hex(va_list arg)
 		arr[i] = temp % 16;
 		temp = temp / 16;
 	}
-	for (i = count - 1; i >= 0; i++)
+	for (i = count - 1; i >= 0; i--)
 	{
-		if (arr[i] > 0)
+		if (arr[i] > 9)
 			arr[i] = arr[i] + 39;
 		_putchar(arr[i] + '0');
 	}
