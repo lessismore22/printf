@@ -2,12 +2,12 @@
 
 /**
  * print_HEX_ex - a function that converts to hex
- * @val: variable param
+ * @num: arguments inputed
  * Return: count
  *
  */
 
-int print_HEX_ex(unsigned int num)
+int printf_HEX_ex(unsigned int num)
 {
 	int i, count = 0;
 	int *arr;
@@ -20,8 +20,7 @@ int print_HEX_ex(unsigned int num)
 	}
 	count++;
 	arr = malloc(sizeof(int) * count);
-	if (arr == NULL)
-		return (NULL);
+
 	for (i = 0; i < count; i++)
 	{
 		arr[i] = temp % 16;

@@ -2,18 +2,18 @@
 
 /**
  * printf_exc - function that prints exclusivr string
- * @val: value
+ * @arg: value
  * Return: no. of characters
  *
  */
 
-int print_exc(va_list val)
+int print_exc(va_list arg)
 {
 	char *s;
-	int i, len = 0;
-	int value;
+	int i, str_len = 0;
+	unsigned int value;
 
-	s = va_arg(val, char *);
+	s = va_arg(arg, char *);
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
@@ -22,22 +22,22 @@ int print_exc(va_list val)
 		{
 	        	_putchar('\\');
 	         	_putchar('x');
-		        len = len + 2;
+		        str_len = str_len + 2;
 		        value = s[i];
 		        if (value < 16)
 			{
 				_putchar('0');
-				len++;
+				str_len++;
 			}
 
-			len = len + printf_HEX_ex(value);
+			str_len = str_len + printf_HEX_ex(value);
 		}
 		else
 		{
 			_putchar(s[i]);
-			len++;
+			str_len++;
 		}
 	}
-	return (len);
+	return (str_len);
 }
 

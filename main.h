@@ -30,12 +30,16 @@ int printf_unsigned(va_list arg);
 int printf_int(va_list arg);
 int printf_dec(va_list arg);
 int print_oct(va_list val);
-int print_hex(va_list val);
-int print_HEX(va_list val);
-int print_HEX_ex(unsigned int num);
-int print_exc(va_list val);
+int printf_hex(va_list val);
+int printf_HEX(va_list arg);
+int printf_HEX_ex(unsigned int num);
+int print_exc(va_list arg);
 int print_reve(va_list val);
 int print_rot13(va_list val);
+<<<<<<< HEAD
 int print_bin(va_list val);
+=======
+int printf_pointer(va_list arg);
+>>>>>>> 7aa84eb401c633b31093c9327e7847be92625eca
 
 #endif
