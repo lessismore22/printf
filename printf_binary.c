@@ -6,24 +6,32 @@
  * Return: integer
  */
 
-int print_bin(va_list arg)
+int print_bin(va_list val)
 {
-	unsigned int num = va_arg(arg, unsigned int);
-	int count = 0;
-	int bit_length = sizeof(unsigned int) * 8;
+	int pure = 0;
+	int impure = 0;
+	int i, a = 1, b;
+	unsigned int num = va_arg(val, unsigned int);
+	unsigned int p;
 
-	int i;
-
-	for (i = bit_length - 1; i >= 0; i--)
+	for (i = 0; i < 32; i++)
 	{
-		int bit = (num >> i) & 1;
-
-		_putchar('0' + bit);
-		count++;
+		p = ((a << (31 - i)) & num);
+		if (p >> (31 - i))
+			pure = 1;
+		if (pure)
+		{
+			b = p >> (31 - i);
+			_putchar(b + 48);
+			impure++;
+		}
 	}
-
-	return (count);
-}
+	if (impure == 0)
+	{
+		impure++;
+		_putchar('0');
+	}
+	return (impure);
 }
 
 
