@@ -7,12 +7,17 @@
 #include <stdlib.h>
 #include <limits.h>
 
+/**
+ * struct format - matches the specifiers for the printf
+ * @id: pointer of specifier
+ * @f: pointer to function
+ */
 
 typedef struct format
 {
 	char *id;
 	int (*f)();
-}spec_types;
+} spec_types;
 
 
 int _printf(const char *format, ...);
@@ -31,5 +36,6 @@ int print_HEX_ex(unsigned int num);
 int print_exc(va_list val);
 int print_reve(va_list val);
 int print_rot13(va_list val);
+int print_bin(va_list val);
 
 #endif
