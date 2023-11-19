@@ -8,6 +8,7 @@
 
 int print_bin(va_list val)
 {
+
 	int pure = 0;
 	int impure = 0;
 	int i, a = 1, b;
