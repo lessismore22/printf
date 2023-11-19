@@ -34,5 +34,3 @@ int print_bin(va_list val)
 	}
 	return (impure);
 }
-
-
